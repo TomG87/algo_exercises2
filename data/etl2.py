@@ -74,3 +74,15 @@
 # 'y' => 4,
 # 'z' => 10
 # }
+
+def etl2(hash):
+    newHash = {}
+
+    for values_list in hash.values():
+        for value in values_list:
+            newHash[value.lower()] = newHash.get(value, 0) + 1
+
+    return newHash
+
+print(etl2({1: ["A", "E", "I", "O", "U"]}))
+
