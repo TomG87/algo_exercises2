@@ -74,3 +74,40 @@
 // 'y' => 4,
 // 'z' => 10
 // }
+
+function etl2(hash) {
+  let newHash = {};
+  let i = 0;
+
+  Object.keys(hash).forEach(function (key) {
+    Object.values(hash).forEach(function (value) {
+      value.forEach(function (single) {
+        newHash[single.toString().toLowerCase()] = key;
+      });
+    });
+  });
+  return newHash;
+}
+
+console.log(etl2({ 1: ["A", "E", "I", "O", "U"] }));
+
+// other way to solve:
+
+// function etl2(hash) {
+//   let newHash = {};
+
+//   Object.keys(hash).forEach(function (key) {
+//     hash[key].forEach(function (vowel) {
+//       const lowercaseVowel = vowel.toString().toLowerCase();
+//       if (newHash[lowercaseVowel]) {
+//         newHash[lowercaseVowel] += 1;
+//       } else {
+//         newHash[lowercaseVowel] = 1;
+//       }
+//     });
+//   });
+
+//   return newHash;
+// }
+
+// console.log(etl2({ 1: ["A", "E", "I", "O", "U"] }));
