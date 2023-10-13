@@ -86,7 +86,9 @@ def etl2(hash)
  end
 
 return new_hash
-  
+
+new_hash1 = {}
+
 end
 
 p etl2(1 => ["A", "E", "I", "O", "U"])
@@ -98,3 +100,22 @@ p etl2(1 => ["A", "E", "I", "O", "U"])
 # 'o' => 1,
 # 'u' => 1
 # }
+
+def etl3(hash2)
+
+  new_hash1 = {}
+
+  hash2.each do |key, values|
+    values.each do |value|
+      new_hash1[value.downcase] = key
+    end
+  end
+
+  return new_hash1
+end
+
+p etl3({
+  1 => ["A", "E"],
+  2 => ["D", "G"]
+  })
+
