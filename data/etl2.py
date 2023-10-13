@@ -86,16 +86,16 @@ def etl2(hash):
 
 print(etl2({1: ["A", "E", "I", "O", "U"]}))
 
-def etl2(hash):
-    newHash = {}
+def etl3(hash1):
+    newHash1 = {}
 
-    for values_list in hash.values():
+    for key, values_list in hash1.items():
         for value in values_list:
-            newHash[value.lower()] = newHash.get(value, 0) + 1
+            newHash1[value.lower()] = key
 
-    return newHash
+    return newHash1
 
-print(etl2({
+print(etl3({
 1 : ["A", "E"],
 2 : ["D", "G"]
 }))
