@@ -111,3 +111,21 @@ console.log(etl2({ 1: ["A", "E", "I", "O", "U"] }));
 // }
 
 // console.log(etl2({ 1: ["A", "E", "I", "O", "U"] }));
+
+function etl3(hash) {
+  let newHash1 = {};
+
+  Object.keys(hash).forEach(function (key) {
+    hash[key].forEach(function (single) {
+      newHash1[single.toString().toLowerCase()] = key;
+    });
+  });
+  return newHash1;
+}
+
+console.log(
+  etl3({
+    1: ["A", "E"],
+    2: ["D", "G"],
+  })
+);
