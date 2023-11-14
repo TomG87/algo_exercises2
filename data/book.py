@@ -28,3 +28,29 @@
 # {title: "The Great Gatsby", year: 1925 }
 # ]
 # }
+
+def book(array):
+    i = 0
+    j = 0
+    newHash = {}
+
+    while i < len(array):
+        if array[i]["author"] == array[j]["author"]:
+            if array[i]["author"] not in newHash:
+                newHash[array[i]["author"]] = []
+            newHash[array[i]["author"]].append({"title": array[j]["title"], "year": array[j]["year"]})
+        j += 1
+        i += 1
+
+    return newHash
+
+print(book([
+    { "title": "The Lord of the Rings", "author": "J. R. R. Tolkien", "year": 1954 },
+    { "title": "To Kill a Mockingbird", "author": "Harper Lee", "year": 1960 },
+    { "title": "1984", "author": "George Orwell", "year": 1949 },
+    { "title": "Go Set a Watchman", "author": "Harper Lee", "year": 2015 },
+    { "title": "The Hobbit", "author": "J. R. R. Tolkien", "year": 1937 },
+    { "title": "The Great Gatsby", "author": "F. Scott Fitzgerald", "year": 1925 },
+    { "title": "The Two Towers", "author": "J. R. R. Tolkien", "year": 1954 }
+]))
+
