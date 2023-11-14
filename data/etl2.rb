@@ -110,8 +110,8 @@ def etl3(hash2)
       new_hash1[value.downcase] = key
     end
   end
-
-  return new_hash1
+  sorted_hash = new_hash1.sort.to_h
+  return sorted_hash
 end
 
 p etl3({
@@ -119,3 +119,28 @@ p etl3({
   2 => ["D", "G"]
   })
 
+
+def etl4(hash3)
+
+  new_hash2 = {}
+
+  hash3.each do |key, values|
+    values.each do |value|
+      new_hash2[value.downcase] = key
+    end
+  end
+
+  sorted_hash1 = new_hash2.sort.to_h
+  
+  return sorted_hash1
+end
+
+p etl4({
+  1 => ["A", "E", "I", "O", "U", "L", "N", "R", "S", "T"],
+  2 => ["D", "G"],
+  3 => ["B", "C", "M", "P"],
+  4 => ["F", "H", "V", "W", "Y"],
+  5 => ["K"],
+  8 => ["J", "X"],
+  10 => ["Q", "Z"]
+  })
