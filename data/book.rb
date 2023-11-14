@@ -32,7 +32,7 @@
 def book(array)
   new_hash = {}
   i = 0
-  j = 1
+  j = 0
 
   while i < array.length
     if array[i][:author] == array[j][:author]

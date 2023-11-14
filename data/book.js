@@ -28,3 +28,37 @@
 // {title: "The Great Gatsby", year: 1925 }
 // ]
 // }
+
+function book(array) {
+  let i = 0;
+  let j = 0;
+  let newHash = {};
+
+  while (i < array.length) {
+    if (array[i]["author"] === array[j]["author"]) {
+      if (!newHash[array[i]["author"]]) {
+        newHash[array[i]["author"]] = [];
+      }
+      newHash[array[i]["author"]].push({
+        title: array[j]["title"],
+        year: array[j]["year"],
+      });
+      j += 1;
+    }
+    i += 1;
+  }
+
+  return newHash;
+}
+
+console.log(
+  book([
+    { title: "The Lord of the Rings", author: "J. R. R. Tolkien", year: 1954 },
+    { title: "To Kill a Mockingbird", author: "Harper Lee", year: 1960 },
+    { title: "1984", author: "George Orwell", year: 1949 },
+    { title: "Go Set a Watchman", author: "Harper Lee", year: 2015 },
+    { title: "The Hobbit", author: "J. R. R. Tolkien", year: 1937 },
+    { title: "The Great Gatsby", author: "F. Scott Fitzgerald", year: 1925 },
+    { title: "The Two Towers", author: "J. R. R. Tolkien", year: 1954 },
+  ])
+);
