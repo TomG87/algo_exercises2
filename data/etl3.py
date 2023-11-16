@@ -24,10 +24,37 @@
 # ]
 
 def etl3(array, array2):
-  i = 0
-  newHash = []
-
-  while i <len(array):
-    author_id = array[i]["author_name"]
-
+    new_array = []
     
+    for video in array:
+        author_id = video["author_id"]
+        
+        # Find the corresponding author in array2
+        matching_author = next((author for author in array2 if author["id"] == author_id), None)
+        
+        if matching_author and video["views"] > 100:
+            new_array.append({
+                "title": video["title"],
+                "views": video["views"],
+                "author_name": f"{matching_author['first_name']} {matching_author['last_name']}"
+            })
+
+    return new_array
+
+result = etl3([
+    {"title": 'How to Make Wood', "author_id": 4, "views": 6},
+    {"title": 'How to Seem Perfect', "author_id": 4, "views": 111},
+    {"title": 'Review of the New "Unbreakable Mug"', "author_id": 2, "views": 202},
+    {"title": 'Why Pigs Stink', "author_id": 1, "views": 12}
+], [
+    {"id": 1, "first_name": 'Jazz', "last_name": 'Callahan'},
+    {"id": 2, "first_name": 'Ichabod', "last_name": 'Loadbearer'},
+    {"id": 3, "first_name": 'Saron', "last_name": 'Kim'},
+    {"id": 4, "first_name": 'Teena', "last_name": 'Burgess'}
+])
+
+print(result)
+
+  
+
+
