@@ -22,3 +22,12 @@
 # {title: 'How to Seem Perfect', views: 111, author_name: 'Teena Burgess' }
 # {title: 'Review of the New "Unbreakable Mug"', views: 202, author_name: 'Ichabod Loadbearer' },
 # ]
+
+def etl3(array, array2):
+  i = 0
+  newHash = []
+
+  while i <len(array):
+    author_id = array[i]["author_name"]
+
+    
