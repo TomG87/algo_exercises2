@@ -4,3 +4,18 @@
 
 # Input: [1, 2, 3, 4, 5], [1, 3, 5, 7, 9]
 # Output: [1, 3, 5]
+
+def intersection(array, array2):
+  
+  i = 0
+  newHash = []
+
+  while i < len(array):
+    for single in array2:
+      if array[i] == single:
+        newHash.append(single)
+    i += 1
+  
+  return newHash
+
+print(intersection([1, 2, 3, 4, 5], [1, 3, 5, 7, 9]))
