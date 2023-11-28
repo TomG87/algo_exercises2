@@ -7,3 +7,11 @@
 
 // Input: [1, 2, 3, 4, 5, 6], [6, 3, 7]
 // Output: false
+
+function subset(array, array2) {
+  return array2.every(function (single) {
+    return array.includes(single);
+  });
+}
+
+console.log(subset([1, 2, 3, 4, 5, 6], [6, 3, 2]));
