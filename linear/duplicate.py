@@ -6,3 +6,15 @@
 # Output: 2
 
 def duplicate(array):
+  i = 0
+
+  while i < len(array) - 1: 
+    j = i + 1
+
+    while j < len(array):
+      if array[i] == array[j]:
+        return array[i]
+      j += 1
+    i += 1
+
+print(duplicate([5, 2, 9, 7, 2, 6]))
