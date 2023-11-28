@@ -7,3 +7,14 @@
 
 # Input: [1, 2, 3, 4, 5, 6], [6, 3, 7]
 # Output: false
+
+def subset(array, array2):
+
+  for single in array2:
+    if single not in array:
+      return False
+  else:
+   return True
+
+print(subset([1, 2, 3, 4, 5, 6], [6, 3, 2]))
+  
