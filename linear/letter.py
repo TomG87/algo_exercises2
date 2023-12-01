@@ -4,3 +4,13 @@
 
 # Input: “The quick brown box jumps over a lazy dog”
 # Output: “f”
+
+def letter(string):
+
+  alphabet = "abcdefghijklmnopqrstuvwxyz"
+
+  for char in alphabet:
+    if char.lower() not in string.lower():
+      return char
+    
+print(letter("The quick brown box jumps over a lazy dog"))
