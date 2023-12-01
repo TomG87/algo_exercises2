@@ -5,3 +5,14 @@
 // Input: “The quick brown box jumps over a lazy dog”
 // Output: “f”
 
+function letter(string) {
+  let alphabet = "abcdefghijklmnopqrstuvwxyz";
+
+  for (let char of alphabet) {
+    if (!string.toLowerCase().includes(char.toLowerCase())) {
+      return char;
+    }
+  }
+}
+
+console.log(letter("The quick brown box jumps over a lazy dog"));
