@@ -14,3 +14,16 @@
 # (The "l" and "o" are repeated, so the first non-repeating character is the "v", which is at index 2.)
 
 # Note: You may assume the string contain only lowercase letters.
+
+def unique(string):
+
+  i = 0
+
+  while i < len(string):  
+    char = string[i]
+  
+    if string.count(char) == 1:
+      return i
+    i += 1
+
+print(unique("loveleetcode"))
