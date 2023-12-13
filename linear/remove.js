@@ -1,18 +1,17 @@
 // Create a function that removes the first and last characters from a string.
 
+function removeChar(string) {
+  let newString = "";
+  let start = 1;
+  let end = string.length - 1;
 
-def removechar(string)
+  if (string.length <= 2) {
+    return string;
+  } else {
+    newString += string.substring(start, end);
+  }
 
-newstring = ""
+  return newString;
+}
 
-
-  if string.length < 2
-    return string
-  else
-    newstring = string.split("")[1..-2].join
-  end
-
-  return newstring
-end
-
-p removechar("hello")
+console.log(removeChar("hello"));
