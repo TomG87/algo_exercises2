@@ -9,3 +9,14 @@
 # // 83 + 34 = 117
 
 # lessThan100(3, 77) ➞ true
+
+def lessthan100(number, number2):
+
+  sum = number + number2
+
+  if sum < 100:
+    return True
+  else:
+    return False
+  
+print(lessthan100(30,30))
