@@ -6,3 +6,13 @@
 # Convert(2, 0) ➞ 7200
 
 # Convert(0, 0) ➞ 0
+
+def conversion(hours, minutes)
+
+  conversion1 = hours * 3600
+  conversion2 = minutes * 60
+
+  total = conversion1 + conversion2
+end
+
+p conversion(1,3)
