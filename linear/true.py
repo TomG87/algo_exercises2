@@ -11,3 +11,12 @@
 # Return 0 if given an empty array.
 # All array items are of the type bool (true or false).
 
+def truefalse(array):
+  sum = 0
+
+  for single in array:
+    if single == True:
+      sum += 1
+  return sum
+
+print(truefalse([True, False, False, True, False]))
