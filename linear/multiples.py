@@ -9,3 +9,18 @@
 # arrayOfMultiples(17, 6) ➞ [17, 34, 51, 68, 85, 102]
 # Notes
 # Notice that num is also included in the returned array.
+
+def multiples(num, length):
+
+  newArray = []
+  i = num
+  j = 0
+
+  while j < length:
+    newArray.append(num)
+    num += i
+    j += 1
+
+  return newArray
+
+print(multiples(17, 6))
