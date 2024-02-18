@@ -9,3 +9,18 @@
 // arrayOfMultiples(17, 6) ➞ [17, 34, 51, 68, 85, 102]
 // Notes
 // Notice that num is also included in the returned array.
+
+function multiples(num, length) {
+  let newArray = [];
+  let i = num;
+  let j = 0;
+
+  while (j < length) {
+    newArray.push(num);
+    num += i;
+    j += 1;
+  }
+  return newArray;
+}
+
+console.log(multiples(12, 10));
