@@ -9,3 +9,18 @@
 
 # keysAndValues({ key1: true, key2: false, key3: undefined })
 # ➞ [["key1", "key2", "key3"], [true, false, undefined]]
+
+
+def jazz(array):
+
+  newArray = []
+
+  for single in array:
+    if "7" in single:
+      newArray.append(single)
+    else:
+      newIndex = str(single) +"7"
+      newArray.append(newIndex)
+  return newArray
+
+print(jazz(["Dm", "G", "E", "A"]))
