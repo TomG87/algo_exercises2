@@ -1,13 +1,14 @@
-function solution(n) {
-  let i = 0;
-  let j = 1;
+// What Javascript statement in place of "?" will make the result always be between 6 and 7? 
 
-  if (n.length > 1) {
-    n.split("").parseInt(n);
-  } else {
-    return n;
-  }
-  return total;
+
+function problem(array) {
+const x = 2; 
+let y = 4; 
+
+function update(arg) 
+{ return Math.random() + y * arg; } 
+y = 2; 
+?; 
+
+const result = update(x); 
 }
-
-console.log(solution(29));
