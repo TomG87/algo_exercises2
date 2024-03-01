@@ -7,3 +7,17 @@
 # removeDups(["The", "big", "cat"]) ➞ ["The", "big", "cat"]
 
 # removeDups(["John", "Taylor", "John"]) ➞ ["John", "Taylor"]
+
+def double(array):
+
+  i = 0
+  newArray = []
+
+  while i < len(array):
+    if array[i] not in newArray:
+      newArray.append(array[i])
+    i += 1
+
+  return newArray
+
+print(double([1, 0, 1, 0]))
